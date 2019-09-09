@@ -26,11 +26,11 @@ namespace Showcase
     // Example: class Program followed by its definition in the code block enclosed by brackets { }
     internal class Program
     {
-        private static compensation compensationSample;
-        private static compensation compensationSample2;
-        private static void Main(string[] args)
+        private static Compensation compensationSample;
+        private static Compensation compensationSample2;
+        private static void Main()
         {
-            compensationSample = new compensation(_baseSalary: 15000f, 1000f, 500f, 0f, TAX_TIERS.TIER2);
+            compensationSample = new Compensation(_baseSalary: 15000f, 1000f, 500f, 0f, TAX_TIERS.TIER2);
             compensationSample2.baseSalary = 18000f;
             Console.WriteLine("Welcome to the C# Showcase project");
             Console.WriteLine(compensationSample.baseSalary.ToString());
@@ -45,9 +45,9 @@ namespace Showcase
     // C# 1.0: Structures are value types. They are copied on assignment. For example, built-in C# numeric types are built
     //         using structs like "float" as the "system.single" struct.
     // Example: struct compensation, followed by the data packed into the struct inside the { code block }
-    internal struct compensation
+    internal struct Compensation
     {
-        public compensation(float _baseSalary, float _bonus, float _expenses, float _totalCompensation, TAX_TIERS _taxTier)
+        public Compensation(float _baseSalary, float _bonus, float _expenses, float _totalCompensation, TAX_TIERS _taxTier)
         {
             baseSalary = _baseSalary;
             bonus = _bonus;
